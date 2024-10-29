@@ -103,15 +103,17 @@ html {
 .modal__header {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   border-bottom: 1px solid var(--color-primary-100);
   padding-bottom: 1rem;
-  position: relative;
 }
 .modal__header p {
   font-family: Vazirmatn;
   font-size: 1.5rem;
   font-weight: 500;
+  /* margin: 0 auto; */
+  flex: 1;
+  text-align: center;
 }
 
 /* close-modal btn*/
@@ -119,13 +121,10 @@ html {
   background-color: transparent;
   outline: none;
   border: none;
-  position: absolute;
-  left: 0;
 }
 
 /* modal__body */
-.modal__body,
-.modal__footer {
+.modal__body {
   display: grid;
   grid-template-columns: 1fr;
   gap: 15px;
@@ -144,25 +143,27 @@ html {
   border: 1px solid var(--color-secondary-300);
   border-radius: var(--border-radius-md);
   padding: 0.8rem 0.5rem;
-  outline: 0;
+  outline: none;
 }
 @media only screen and (min-width: 600px) {
-  .modal__body,
-  .modal__footer {
+  .modal__body {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 /* modal__footer */
 .modal__footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   margin-top: 3.5rem;
+  gap: 15px;
 }
 
 /* button */
 .btn {
   border: 1px solid var(--color-primary-900);
   border-radius: var(--border-radius-md);
-  padding: 0.8rem 3.5rem;
+  padding: 0.8rem 0rem;
   font-weight: bold;
   cursor: pointer;
 }
@@ -177,4 +178,7 @@ html {
 .btn--refuse {
   background-color: transparent;
   color: var(--color-primary-900);
+}
+.btn-add-info{
+  padding: 0.8rem 3rem;
 }
